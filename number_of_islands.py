@@ -1,5 +1,5 @@
 """Number of Islands
-Medium Topics Company Tags
+Medium Topics
 Hints
 
 Given a 2D grid grid where '1' represents land and '0' represents water, count and return the number of islands.
