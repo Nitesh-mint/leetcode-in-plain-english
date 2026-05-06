@@ -9,7 +9,6 @@ Output: [1,3,2]
 """
 
 # Definition for a binary tree node.
-from collections import deque
 from typing import List, Optional
 
 
@@ -20,22 +19,17 @@ class TreeNode:
         self.right = right
 
 
+# Recursive soltuion
 class Solution:
     def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        if root is None:
-            return []
-
-        queue = deque()
-        queue.append(root)
         result = []
 
-        while queue:
-            node = queue.popleft()
-            result.append(node.val)
+        def dfs(node):
+            if node is None:
+                return
 
-            if node.left:
-                queue.append(node.left)
-            if node.right:
-                queue.append(node.right)
+            dfs(node.left)
+            result.append(node.val)
+            dfs(node.right)
 
         return result
