@@ -21,8 +21,6 @@ Output: []
 from collections import deque
 from typing import List, Optional
 
-from typing_extensions import final
-
 from BST_inorder_traversal import TreeNode
 
 
